@@ -36,7 +36,7 @@ def main():
     clients_per_round = args.clients_per_round if args.clients_per_round != -1 else tup[2]
 
     # Suppress tf warnings
-    tf.logging.set_verbosity(tf.logging.ERROR)
+    tf.compat.v1.logging.set_verbosity(tf.logging.ERROR)
 
     # Create 2 different models: one for server and one shared by all clients
     model_params = MODEL_PARAMS[model_path]
